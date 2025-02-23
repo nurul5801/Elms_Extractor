@@ -176,8 +176,9 @@ if __name__ == "__main__":
         choice = input("Enter your choice: ")
         if choice == "1":
            course_ids = get_all_course_id(session,session_key)
+           print("Please wait. Extracting data...")
            for course_id in course_ids:
-            extract_course_by_id(session,course_id)
+            extract_course_by_id(session,str(course_id))
         elif choice == "2":
             course_id = input("Enter Course ID: ")
             print("Please wait. Extracting data...")
